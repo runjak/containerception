@@ -2,7 +2,7 @@
 A reference implementation of a self-referential [joke](https://xkcd.com/917/).
 
 Because of reasons I wanted to toy with the following parts:
-* [Alpinelinux](https://www.alpinelinux.org/)
+* [Alpine Linux](https://www.alpinelinux.org/)
 * [Docker Engine](https://docs.docker.com/engine/)
 * [Docker Compose](https://docs.docker.com/compose/)
 
