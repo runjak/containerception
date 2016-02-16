@@ -13,3 +13,7 @@ Handing the docker socket to the container breaks isolation
 and you need docker outside of the container to run it in the first place.
 You could, however still use the resulting image as the basis for a container that manages
 other containers by the means of `docker` and `docker-compose` in a spirit similar to what [skydock](https://github.com/crosbymichael/skydock) does.
+
+-----
+
+Note that installing `zsh, tmux, git` may overdo it a little as these may not be necessary in some kind of target container.
