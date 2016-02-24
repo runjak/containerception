@@ -30,3 +30,7 @@ docker run \
   -v `pwd`:/dockerception \
   -d runjak/dockerception
 ```
+
+## Remarks:
+
+Sadly `runjak/dockerception` cannot restart itself because `docker-compose up -d` kills the old container before a new one is up.
