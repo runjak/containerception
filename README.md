@@ -34,3 +34,4 @@ docker run \
 ## Remarks:
 
 Sadly `runjak/dockerception` cannot restart itself because `docker-compose up -d` kills the old container before a new one is up.
+It appears that this would need the help of a second instance of `runjak/dockerception`.
