@@ -7,14 +7,18 @@ LABEL version="1.0.0" \
 
 RUN apk update \
  && apk upgrade \
- && apk add \
-    zsh \
-    tmux \
-    docker \
-    docker-zsh-completion \
-    git \
-    py-pip \
- && wget -O /etc/zsh/zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc \
+ && apk add docker py-pip \
  && pip install --upgrade pip \
  && pip install docker-compose \
- && rm /var/cache/apk/APKINDEX*tar.gz
+ && rm /var/cache/apk/APKINDEX*tar.gz \
+ && mkdir /dockerception
+
+# List of images to docker pull:
+ENV IMAGES="alpine:latest"
+
+# Sleep time in between cycles:
+ENV SLEEPTIME="10s"
+
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
